@@ -1,7 +1,4 @@
-<h1 align="center">@swrlab/style-guide</h1>
-<center>
-> SWR Audio Lab Style Guide
-</center>
+<h1 align="center">SWR Audio Lab Style Guide</h1>
 
 <div align="center">
 
@@ -10,9 +7,6 @@
 
 </div>
 
-<table><tr></tr><tr><td>
-SWR Audio Lab's Style Guide 💅
-</td></tr></table>
 
 
 ## Introduction
