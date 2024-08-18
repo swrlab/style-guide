@@ -7,8 +7,6 @@
 
 </div>
 
-
-
 ## Introduction
 
 This repository is the home of an based on Vercel's style guide, which includes configs for
@@ -76,8 +74,8 @@ export default audiolab(
   ],
   {
     prettier: true,
-    vue: true
-  },
+    vue: true,
+  }
 )
 ```
 
@@ -89,9 +87,8 @@ You can also import and compose individual presets. However, it is recommended t
 // eslint.config.js
 import { presetAll, presetBasic } from '@swrlab/style-guide/eslint/presets.js'
 
-export default presetBasic;
+export default presetBasic
 ```
-
 
 ## Biome
 
@@ -108,8 +105,8 @@ To use the shared Biome config, set the following in `biome.json`:
 This config is inspired by the work of [The Vercel Style Guide](https://github.com/vercel/style-guide) and is further
 based on
 
-* https://github.com/antfu/eslint-config
-* https://github.com/sxzz/eslint-config
+- https://github.com/antfu/eslint-config
+- https://github.com/sxzz/eslint-config
 
 ## Contributing
 
