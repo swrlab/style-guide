@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/style-guide",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "SWR Audio Lab's engineering style guide",
 	"type": "module",
 	"license": "ISC",
@@ -12,11 +12,7 @@
 		"type": "git",
 		"url": "https://github.com/swrlab/style-guide.git"
 	},
-	"files": [
-		"biome",
-		"eslint",
-		"prettier"
-	],
+	"files": ["biome", "eslint", "prettier"],
 	"main": "index.js",
 	"exports": {
 		"./biome": "./biome/biome.json",
@@ -45,16 +41,16 @@
 		}
 	},
 	"dependencies": {
-		"@babel/core": "^7.25.9",
+		"@babel/core": "^7.26.0",
 		"@babel/eslint-parser": "^7.25.9",
-		"@eslint/js": "^9.13.0",
-		"@stylistic/eslint-plugin-js": "^2.9.0",
+		"@eslint/js": "^9.15.0",
+		"@stylistic/eslint-plugin-js": "^2.10.1",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-import-resolver-alias": "^1.1.2",
 		"eslint-plugin-eslint-comments": "^3.2.0",
-		"eslint-plugin-import-x": "^4.3.1",
-		"eslint-plugin-jsonc": "^2.16.0",
-		"eslint-plugin-n": "^17.11.1",
+		"eslint-plugin-import-x": "^4.4.2",
+		"eslint-plugin-jsonc": "^2.18.2",
+		"eslint-plugin-n": "^17.13.2",
 		"eslint-plugin-perfectionist": "^3.9.1",
 		"eslint-plugin-prettier": "^5.2.1",
 		"eslint-plugin-security": "^3.0.1",
@@ -62,11 +58,11 @@
 		"eslint-plugin-testing-library": "^6.4.0",
 		"eslint-plugin-unicorn": "^56.0.0",
 		"eslint-plugin-unused-imports": "^4.1.4",
-		"eslint-plugin-vue": "^9.29.1",
-		"globals": "^15.11.0"
+		"eslint-plugin-vue": "^9.31.0",
+		"globals": "^15.12.0"
 	},
 	"devDependencies": {
-		"eslint": "^9.13.0",
+		"eslint": "^9.15.0",
 		"eslint-define-config": "^2.1.0",
 		"lint-staged": "^15.2.10",
 		"prettier": "^3.3.3"
