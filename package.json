@@ -45,7 +45,7 @@
 		"@babel/eslint-parser": "^7.25.9",
 		"@eslint/js": "^9.15.0",
 		"@stylistic/eslint-plugin-js": "^2.10.1",
-		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-prettier": "^10.0.1",
 		"eslint-import-resolver-alias": "^1.1.2",
 		"eslint-plugin-eslint-comments": "^3.2.0",
 		"eslint-plugin-import-x": "^4.4.2",
