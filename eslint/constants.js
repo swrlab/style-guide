@@ -1,4 +1,4 @@
-export const ECMA_VERSION = 2022
+export const ECMA_VERSION = 2025
 export const GLOB_SRC_EXT = '?([cm])[jt]s?(x)'
 export const GLOB_JS = '**/*.?([cm])js'
 export const JAVASCRIPT_FILES = ['*.js?(x)', '*.mjs']
