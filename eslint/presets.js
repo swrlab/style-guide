@@ -13,6 +13,7 @@ import {
 	vue,
 	sonarjs,
 } from './configs/index.js'
+import {typescriptEslintConfig} from "./configs/typescript.js";
 
 /**
  * @typedef {import('eslint-define-config').FlatESLintConfigItem} FlatESLintConfigItem
@@ -30,7 +31,7 @@ export const presetJavaScript = [
 	...sonarjs,
 ]
 /** Includes `presetJavaScript` and typescript support */
-export const presetBasic = [...presetJavaScript, ...json, ...perfectionist, ...sortPackageJson]
+export const presetBasic = [...presetJavaScript, ...json, ...perfectionist, ...sortPackageJson, ...typescriptEslintConfig]
 export const presetAll = [...presetBasic, ...vue, ...prettier]
 export { presetBasic as basic, presetAll as all }
 
