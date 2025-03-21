@@ -12,7 +12,11 @@
 		"type": "git",
 		"url": "https://github.com/swrlab/style-guide.git"
 	},
-	"files": ["biome", "eslint", "prettier"],
+	"files": [
+		"biome",
+		"eslint",
+		"prettier"
+	],
 	"main": "index.js",
 	"exports": {
 		"./biome": "./biome/biome.json",
@@ -25,6 +29,7 @@
 	"scripts": {
 		"lint": "eslint --max-warnings=0 .",
 		"lint:fix": "eslint --max-warnings=0 --fix .",
+		"format": "prettier --write .",
 		"prettier-check": "prettier --check .",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -65,7 +70,7 @@
 		"eslint": "^9.15.0",
 		"eslint-define-config": "^2.1.0",
 		"lint-staged": "^15.2.10",
-		"prettier": "^3.3.3"
+		"prettier": "^3.5.3"
 	},
 	"engines": {
 		"node": ">=18"
