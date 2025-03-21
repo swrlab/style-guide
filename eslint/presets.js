@@ -48,7 +48,7 @@ const migrationOverwrites = [
 /**
  *
  * @param {FlatESLintConfigItem | FlatESLintConfigItem[]} config
- * @param {{prettier: boolean, vue: boolean, cjs: boolean, migrate: boolean}} features
+ * @param {{prettier: boolean, vue: boolean, migrate?: boolean}} features
  * @returns {FlatESLintConfigItem[]}
  */
 export function audiolab(

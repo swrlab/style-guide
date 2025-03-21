@@ -79,6 +79,14 @@ export default audiolab(
 )
 ```
 
+### Development
+
+For development and testing of the rules you can use:
+
+```bash
+npx @eslint/config-inspector@latest
+```
+
 ### Presets
 
 You can also import and compose individual presets. However, it is recommended that you use the factory function above.
