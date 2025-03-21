@@ -13,7 +13,7 @@ import {
 	vue,
 	sonarjs,
 } from './configs/index.js'
-import {typescriptEslintConfig} from "./configs/typescript.js";
+import { typescriptEslintConfig } from './configs/typescript.js'
 
 /**
  * @typedef {import('eslint-define-config').FlatESLintConfigItem} FlatESLintConfigItem
@@ -31,7 +31,13 @@ export const presetJavaScript = [
 	...sonarjs,
 ]
 /** Includes `presetJavaScript` and typescript support */
-export const presetBasic = [...presetJavaScript, ...json, ...perfectionist, ...sortPackageJson, ...typescriptEslintConfig]
+export const presetBasic = [
+	...presetJavaScript,
+	...json,
+	...perfectionist,
+	...sortPackageJson,
+	...typescriptEslintConfig,
+]
 export const presetAll = [...presetBasic, ...vue, ...prettier]
 export { presetBasic as basic, presetAll as all }
 
@@ -49,7 +55,7 @@ const migrationOverwrites = [
 /**
  *
  * @param {FlatESLintConfigItem | FlatESLintConfigItem[]} config
- * @param {{prettier: boolean, vue: boolean, cjs: boolean, migrate: boolean}} features
+ * @param {{prettier: boolean, vue: boolean, migrate?: boolean}} features
  * @returns {FlatESLintConfigItem[]}
  */
 export function audiolab(

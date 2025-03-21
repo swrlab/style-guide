@@ -1,17 +1,40 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
 	"formatter": {
 		"indentStyle": "tab",
-		"formatWithErrors": true
+		"formatWithErrors": true,
+		"lineWidth": 120,
+		"lineEnding": "lf"
 	},
 	"javascript": {
 		"formatter": {
 			"semicolons": "asNeeded",
-			"trailingComma": "es5",
+			"trailingCommas": "es5",
 			"quoteStyle": "single"
+		},
+		"globals": ["cast", "Bun"]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"all": true,
+				"noNodejsModules": "info",
+				"noUndeclaredDependencies": "info"
+			},
+			"performance": {
+				"all": true
+			},
+			"security": {
+				"all": true
+			},
+			"nursery": {
+				"useSortedClasses": "info"
+			}
 		}
+	},
+	"organizeImports": {
+		"enabled": true
 	}
 }

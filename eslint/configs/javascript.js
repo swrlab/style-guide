@@ -17,7 +17,7 @@ export const javascript = [
 			ecmaVersion: ECMA_VERSION,
 			globals: {
 				...globals.browser,
-				...globals.es2021,
+				...globals.es2025,
 				...globals.node,
 				document: 'readonly',
 				navigator: 'readonly',
