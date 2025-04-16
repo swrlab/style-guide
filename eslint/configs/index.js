@@ -12,5 +12,6 @@ export * from './unicorn.js'
 export * from './vue.js'
 export * from './security.js'
 export * from './sonarjs.js'
+// TODO: remove this barrel file
 // TODO: add yaml config
 // export * from './yml.js'

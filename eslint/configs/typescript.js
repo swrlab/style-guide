@@ -9,7 +9,8 @@ export const typescriptEslintConfig = typescriptEslint.config(
 		extends: [
 			eslint.configs.recommended,
 			...typescriptEslint.configs.recommended,
-			...eslintPluginVue.configs['flat/recommended'],
+			// ...eslintPluginVue.configs['flat/recommended'],
+			...eslintPluginVue.configs['flat/essential'],
 		],
 		files: ['**/*.{ts,vue}'],
 		languageOptions: {
@@ -21,7 +22,7 @@ export const typescriptEslintConfig = typescriptEslint.config(
 			},
 		},
 		rules: {
-			// your rules
+			'vue/html-indent': ['error', 'tab'],
 		},
 	}
 )
