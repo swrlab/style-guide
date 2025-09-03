@@ -18,20 +18,25 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
       - name: Setup node and npm
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           registry-url: 'https://registry.npmjs.org/'
 
-      - name: npm install
-        run: npm install
+      - name: bun install
+        run: bun install
 
-      - name: npm build
-        run: npm run build
+      - name: bun build
+        run: bun run build
 
-      - name: npm test
-        run: npm run test
+      - name: bun test
+        run: bun run test
 
       - name: npm publish
         run: npm publish --access public --provenance --no-git-checks
