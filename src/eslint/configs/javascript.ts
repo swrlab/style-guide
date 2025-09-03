@@ -10,6 +10,8 @@ export type JSOptions = {
 	isInEditor?: boolean
 }
 
+// TODO: consider adding https://eslint-community.github.io/eslint-plugin-es-x/ and https://github.com/amilajack/eslint-plugin-compat
+
 export const javascript = ({ isInEditor = false, strict = true }: JSOptions = {}): Config[] => [
 	{
 		languageOptions: {

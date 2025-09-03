@@ -3,10 +3,12 @@ import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../constants.ts'
 import { pluginMarkdown } from '../plugins.ts'
 
 export const markdown = (): Config[] => [
-	...pluginMarkdown.configs.processor.map((config: Config) => ({
-		...config,
-		name: `audiolab/${config.name || 'anonymous'}`,
-	})),
+	...pluginMarkdown.configs.processor.map(
+		(config: any): Config => ({
+			...config,
+			name: `audiolab/${config.name || 'anonymous'}`,
+		})
+	),
 
 	{
 		files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],

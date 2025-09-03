@@ -32,11 +32,13 @@
 		"build": "bun run build:typegen && tsdown",
 		"build:typegen": "bun scripts/typegen.ts",
 		"build:inspector": "bun run build && eslint-config-inspector build",
+		"format": "prettier --write .",
 		"lint": "eslint --max-warnings=0",
 		"lint:fix": "eslint --max-warnings=0 --fix",
-		"format": "prettier --write .",
 		"prettier-check": "prettier --check .",
-		"test": "bun run prettier-check && bun run lint"
+		"release": "bumpp",
+		"test": "bun run prettier-check && bun run typecheck && bun run lint",
+		"typecheck": "tsc --noEmit"
 	},
 	"peerDependencies": {
 		"eslint": "^9.34.0",
