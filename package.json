@@ -13,14 +13,13 @@
 		"url": "https://github.com/swrlab/style-guide.git"
 	},
 	"files": [
-		"dist",
-		"src/biome/biome.json"
+		"dist"
 	],
 	"main": "dist/index.js",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"exports": {
-		"./biome.json": "./src/biome/biome.json",
+		"./biome.json": "./dist/biome.json",
 		"./eslint.js": "./dist/eslint.js",
 		"./prettier.js": "./dist/prettier.js",
 		"./package.json": "./package.json"
