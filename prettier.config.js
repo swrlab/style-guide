@@ -1,4 +1,4 @@
-import audiolabPretterConfig from './prettier/index.js'
+import audiolabPretterConfig from './src/prettier/index.js'
 
 /**
  * @see https://prettier.io/docs/configuration

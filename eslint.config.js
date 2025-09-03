@@ -1,17 +1,17 @@
-import { audiolab } from './eslint/presets.js'
+import { audiolab } from './src/eslint/index.ts'
 
 export default audiolab(
+	{
+		prettier: false,
+		// comments: true,
+		vue: true,
+		typescript: true,
+	},
 	[
 		{
 			rules: {
 				'import/extensions': ['error', 'ignorePackages'],
 			},
 		},
-	],
-	{
-		prettier: false,
-		comments: true,
-		vue: true,
-		typescript: true,
-	}
+	]
 )
