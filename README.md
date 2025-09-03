@@ -23,18 +23,12 @@ The following configs are available, and are designed to be used together.
 All of our configs are contained in one package, `@swrlab/style-guide`. To install:
 
 ```sh
-# If you use Bun
 bun add --dev @swrlab/style-guide
 
-# If you use Yarn
+# or with other package manager:
+npm install --save-dev @swrlab/style-guide
 yarn add --dev @swrlab/style-guide
-
-# If you use npm
-npm i --save-dev @swrlab/style-guide
-
-# If you use pmpm
-pnpm i --save-dev @swrlab/style-guide
-
+pnpm i -D @swrlab/style-guide
 ```
 
 Some of our ESLint configs require peer dependencies. We'll note those
@@ -42,22 +36,39 @@ alongside the available configs in the [ESLint](#eslint) section.
 
 ## Prettier
 
-> Note: Prettier is a peer-dependency of this package, and should be installed
+> Note: Prettier is a _peer-dependency_ of this package, and should be installed
 > at the root of your project.
 >
 > See: https://prettier.io/docs/en/install.html
 
-To use the shared Prettier config, set the following in `package.json`.
+To use the shared Prettier config, create a `prettier.config.js`
+or `prettier.config.mjs` if in a non-ESM project with following contents:
+
+```js
+import audiolabPrettierConfig from '@swrlab/style-guide/prettier.js'
+
+/**
+ * @see https://prettier.io/docs/configuration
+ * @type {import('prettier').Config}
+ */
+const config = {
+  ...audiolabPrettierConfig,
+}
+
+export default config
+```
+
+Another way is to set the following in `package.json`.
 
 ```json
 {
-  "prettier": "@swrlab/style-guide/prettier"
+  "prettier": "@swrlab/style-guide/prettier.js"
 }
 ```
 
 ## ESLint
 
-> Note: ESLint is a peer-dependency of this package, and should be installed
+> Note: ESLint is a _peer-dependency_ of this package, and should be installed
 > at the root of your project.
 >
 > See: https://eslint.org/docs/user-guide/getting-started#installation-and-usage
@@ -66,16 +77,16 @@ Usage:
 
 ```js
 // eslint.config.mjs
-import { audiolab } from '@swrlab/style-guide/eslint/presets.js'
+import { audiolab } from '@swrlab/style-guide/eslint.js'
 
 export default audiolab(
-  [
-    /* your custom ESLint config */
-  ],
   {
     prettier: true,
     vue: true,
-  }
+  },
+  [
+    /* your custom ESLint config */
+  ]
 )
 ```
 
@@ -83,19 +94,11 @@ export default audiolab(
 
 For development and testing of the rules you can use:
 
-```bash
-npx @eslint/config-inspector@latest
-```
+```sh
+bun run dev
 
-### Presets
-
-You can also import and compose individual presets. However, it is recommended that you use the factory function above.
-
-```js
-// eslint.config.js
-import { presetAll, presetBasic } from '@swrlab/style-guide/eslint/presets.js'
-
-export default presetBasic
+# or with node:
+npm run dev
 ```
 
 ## Biome
@@ -104,14 +107,14 @@ To use the shared Biome config, set the following in `biome.json`:
 
 ```json
 {
-  "extends": ["@swrlab/style-guide/biome"]
+  "extends": ["@swrlab/style-guide/biome.json"]
 }
 ```
 
 ## Credits
 
-This config is inspired by the work of [The Vercel Style Guide](https://github.com/vercel/style-guide) and is further
-based on
+This config used to be inspired by the work of [The Vercel Style Guide](https://github.com/vercel/style-guide) and is further
+based on a mix of:
 
 - https://github.com/antfu/eslint-config
 - https://github.com/sxzz/eslint-config
@@ -119,6 +122,16 @@ based on
 ## Contributing
 
 After cloning, you can run `bun install` (or `npm install`) to install the npm dependencies.
+
+## Development
+
+Start a local eslint-config-inspector:
+
+$ bun run dev
+
+Build types and the config into `dist/`:
+
+$ bun run build
 
 ## License
 
