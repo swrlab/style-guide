@@ -3,7 +3,7 @@ import { pluginJsdoc } from '../plugins.ts'
 
 export const jsdoc = (): Config[] => [
 	{
-		name: 'weiland/jsdoc',
+		name: 'audiolab/jsdoc',
 		plugins: {
 			jsdoc: pluginJsdoc,
 		},

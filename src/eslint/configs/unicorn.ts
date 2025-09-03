@@ -3,7 +3,7 @@ import { pluginUnicorn } from '../plugins.ts'
 
 export const unicorn = (): Config[] => [
 	{
-		name: 'weiland/unicorn',
+		name: 'audiolab/unicorn',
 		plugins: {
 			unicorn: pluginUnicorn,
 		},

@@ -21,7 +21,7 @@ export const imports = (options: OptionsStrict = {}): Config[] => {
 	}
 	return [
 		{
-			name: 'weiland/imports',
+			name: 'audiolab/imports',
 			plugins: {
 				import: pluginImport,
 			},

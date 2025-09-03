@@ -1,12 +1,12 @@
 import type { Config } from '../types.ts'
 import { pluginSonarJS } from '../plugins.ts'
 
-pluginSonarJS.configs.recommended.name = 'weiland/sonarjs/recommended'
+pluginSonarJS.configs.recommended.name = 'audiolab/sonarjs/recommended'
 
 export const sonarjs = (): Config[] => [
 	pluginSonarJS.configs.recommended,
 	{
-		name: 'weiland/sonarjs/rules',
+		name: 'audiolab/sonarjs/rules',
 		rules: {
 			// increase from `15` to `40`
 			// TODO: add strict for this rule

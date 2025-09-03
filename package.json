@@ -82,7 +82,6 @@
 	"devDependencies": {
 		"@eslint/config-inspector": "^1.2.0",
 		"@types/node": "^24.3.0",
-		"@weiland/prettier-config": "^2.0.1",
 		"bumpp": "^10.2.3",
 		"eslint": "^9.34.0",
 		"eslint-typegen": "^2.3.0",

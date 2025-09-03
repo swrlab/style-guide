@@ -5,7 +5,7 @@ import { parserYaml, pluginYaml } from '../plugins.ts'
 
 export const yaml = (): Config[] => [
 	{
-		name: 'weiland/yaml/setup',
+		name: 'audiolab/yaml/setup',
 		plugins: {
 			yml: pluginYaml,
 		},
@@ -15,7 +15,7 @@ export const yaml = (): Config[] => [
 		languageOptions: {
 			parser: parserYaml,
 		},
-		name: 'weiland/yaml/rules',
+		name: 'audiolab/yaml/rules',
 		rules: {
 			...(pluginYaml.configs.standard.rules as RuleOptions),
 			...(pluginYaml.configs.prettier.rules as RuleOptions),

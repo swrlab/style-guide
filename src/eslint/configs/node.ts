@@ -3,7 +3,7 @@ import { pluginNode } from '../plugins.ts'
 
 export const node = (): Config[] => [
 	{
-		name: 'weiland/node',
+		name: 'audiolab/node',
 		plugins: {
 			node: pluginNode,
 		},

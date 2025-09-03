@@ -4,7 +4,7 @@ import { pluginPerfectionist } from '../plugins.ts'
 export const sortPackageJson = (): Config[] => [
 	{
 		files: ['**/package.json'],
-		name: 'weiland/sort/package.json',
+		name: 'audiolab/sort/package.json',
 		rules: {
 			'jsonc/sort-array-values': [
 				'error',
@@ -84,7 +84,7 @@ export const sortPackageJson = (): Config[] => [
 export const sortTsconfig = (): Config[] => [
 	{
 		files: ['**/tsconfig.json', '**/tsconfig.*.json'],
-		name: 'weiland/sort/tsconfig',
+		name: 'audiolab/sort/tsconfig',
 		rules: {
 			'jsonc/sort-keys': [
 				'error',
@@ -203,7 +203,7 @@ export const sortTsconfig = (): Config[] => [
 export const sortPnpmWorkspace = (): Config[] => [
 	{
 		files: ['**/pnpm-workspace.yaml'],
-		name: 'weiland/sort/pnpm-workspace',
+		name: 'audiolab/sort/pnpm-workspace',
 		rules: {
 			'yml/sort-keys': [
 				'error',
@@ -252,7 +252,7 @@ export const sortPnpmWorkspace = (): Config[] => [
 
 export const sortImports = (): Config[] => [
 	{
-		name: 'weiland/sort/imports',
+		name: 'audiolab/sort/imports',
 		plugins: {
 			perfectionist: pluginPerfectionist,
 		},

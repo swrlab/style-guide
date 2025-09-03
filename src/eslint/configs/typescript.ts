@@ -7,11 +7,11 @@ export const typescriptCore = tseslint.config(
 	{
 		extends: [...tseslint.configs.recommended],
 		files: [GLOB_TS, GLOB_TSX],
-		name: 'weiland/typescript/setup',
+		name: 'audiolab/typescript/setup',
 	},
 	{
 		files: [GLOB_TS, GLOB_TSX],
-		name: 'weiland/typescript/rules',
+		name: 'audiolab/typescript/rules',
 		rules: {
 			'@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
 			'@typescript-eslint/consistent-type-assertions': [
@@ -57,7 +57,7 @@ export const typescript = (): Config[] => [
 	...typescriptCore,
 	{
 		files: ['**/*.d.ts'],
-		name: 'weiland/typescript/dts-rules',
+		name: 'audiolab/typescript/dts-rules',
 		rules: {
 			'eslint-comments/no-unlimited-disable': 'off',
 			'import/no-duplicates': 'off',
@@ -68,7 +68,7 @@ export const typescript = (): Config[] => [
 	// TODO: remove below when the `migrate` option is removed
 	{
 		files: [GLOB_JS, '**/*.cjs'],
-		name: 'weiland/typescript/cjs-rules',
+		name: 'audiolab/typescript/cjs-rules',
 		rules: {
 			'@typescript-eslint/no-require-imports': 'off',
 		},

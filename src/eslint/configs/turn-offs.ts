@@ -7,7 +7,7 @@ export const turnOffs = (options: { migrate?: boolean } = {}): Config[] => [
 	...(options.migrate
 		? ([
 				{
-					name: 'weiland/disables/migrate',
+					name: 'audiolab/disables/migrate',
 					rules: {
 						'vue/html-self-closing': 'off',
 					},
@@ -16,14 +16,14 @@ export const turnOffs = (options: { migrate?: boolean } = {}): Config[] => [
 		: []),
 	{
 		files: ['**/scripts/*', '**/cli.*', '**/bin/*'],
-		name: 'weiland/special/cli',
+		name: 'audiolab/special/cli',
 		rules: {
 			'no-console': 'off',
 		},
 	},
 	{
 		files: [`**/*.{test,spec}.${GLOB_SRC_EXT}`],
-		name: 'weiland/special/tests',
+		name: 'audiolab/special/tests',
 		rules: {
 			'no-unused-expressions': 'off',
 			'unicorn/consistent-function-scoping': 'off',
@@ -37,7 +37,7 @@ export const turnOffs = (options: { migrate?: boolean } = {}): Config[] => [
 			'**/*.d.ts',
 			`${GLOB_MARKDOWN}/**`,
 		],
-		name: 'weiland/special/allow-default-export',
+		name: 'audiolab/special/allow-default-export',
 		plugins: {
 			import: pluginImport as any,
 		},
@@ -47,7 +47,7 @@ export const turnOffs = (options: { migrate?: boolean } = {}): Config[] => [
 	},
 	{
 		files: ['**/ISSUE_TEMPLATE/**'],
-		name: 'weiland/special/github',
+		name: 'audiolab/special/github',
 		rules: {
 			'unicorn/filename-case': 'off',
 		},

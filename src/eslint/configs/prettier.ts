@@ -6,7 +6,7 @@ delete rules['vue/html-self-closing']
 
 export const prettier = (): Config[] => [
 	{
-		name: 'weiland/prettier',
+		name: 'audiolab/prettier',
 		plugins: {
 			prettier: pluginPrettier,
 		},

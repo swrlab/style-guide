@@ -3,44 +3,44 @@
 		"JSONC": {
 			"formatter": {
 				"language_server": {
-					"name": "eslint",
-				},
+					"name": "eslint"
+				}
 			},
 			"code_actions_on_format": {
-				"source.fixAll.eslint": true,
+				"source.fixAll.eslint": true
 			},
 			"prettier": {
-				"allowed": false,
+				"allowed": true
 			},
-			"format_on_save": "on",
+			"format_on_save": "on"
 		},
 		"JSON": {
 			"formatter": {
 				"language_server": {
-					"name": "eslint",
-				},
+					"name": "eslint"
+				}
 			},
 			"code_actions_on_format": {
-				"source.fixAll.eslint": true,
+				"source.fixAll.eslint": true
 			},
 			"prettier": {
-				"allowed": true,
+				"allowed": true
 			},
-			"format_on_save": "true",
+			"format_on_save": "true"
 		},
 		"JavaScript": {
 			"formatter": {
 				"language_server": {
-					"name": "eslint",
-				},
+					"name": "eslint"
+				}
 			},
 			"code_actions_on_format": {
-				"source.fixAll.eslint": true,
+				"source.fixAll.eslint": true
 			},
 			"prettier": {
-				"allowed": false,
+				"allowed": false
 			},
-			"format_on_save": "on",
+			"format_on_save": "on"
 		},
 		"TypeScript": {
 			"language_servers": ["eslint", "!deno", "!biome", "..."],
@@ -50,12 +50,12 @@
 			// 	}
 			// },
 			"code_actions_on_format": {
-				"source.fixAll.eslint": true,
+				"source.fixAll.eslint": true
 			},
 			"prettier": {
-				"allowed": true,
+				"allowed": true
 			},
-			"format_on_save": "on",
-		},
-	},
+			"format_on_save": "on"
+		}
+	}
 }

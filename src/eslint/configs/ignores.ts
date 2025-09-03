@@ -5,10 +5,10 @@ import { pluginIgnore } from '../plugins.ts'
 export const ignores = (): Config[] => [
 	{
 		ignores: GLOB_EXCLUDE,
-		name: 'weiland/ignores',
+		name: 'audiolab/ignores',
 	},
 	{
 		...pluginIgnore({ strict: false }),
-		name: 'weiland/gitignore',
+		name: 'audiolab/gitignore',
 	},
 ]

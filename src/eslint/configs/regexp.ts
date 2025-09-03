@@ -5,6 +5,6 @@ import { configs } from 'eslint-plugin-regexp'
 export const regexp = (): Config[] => [
 	{
 		...(configs['flat/recommended'] as Config),
-		name: 'weiland/regexp',
+		name: 'audiolab/regexp',
 	},
 ]

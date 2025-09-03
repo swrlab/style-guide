@@ -40,11 +40,11 @@ export const javascript = ({ isInEditor = false, strict = true }: JSOptions = {}
 		linterOptions: {
 			reportUnusedDisableDirectives: true,
 		},
-		name: 'weiland/js/setup',
+		name: 'audiolab/js/setup',
 	},
-	{ ...configJs.configs.recommended, name: 'weiland/js/recommended' },
+	{ ...configJs.configs.recommended, name: 'audiolab/js/recommended' },
 	{
-		name: 'weiland/js/rules',
+		name: 'audiolab/js/rules',
 		plugins: {
 			'unused-imports': pluginUnusedImports,
 		},
@@ -109,7 +109,7 @@ export const javascript = ({ isInEditor = false, strict = true }: JSOptions = {}
 	},
 	{
 		files: [GLOB_JS],
-		name: 'weiland/javascript/js-only',
+		name: 'audiolab/javascript/js-only',
 		rules: {
 			'no-duplicate-imports': 'error',
 		},

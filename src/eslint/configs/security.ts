@@ -1,12 +1,12 @@
 import type { Config } from '../types.ts'
 import { pluginSecurity } from '../plugins.ts'
 
-pluginSecurity.configs.recommended.name = 'weiland/security/recommended'
+pluginSecurity.configs.recommended.name = 'audiolab/security/recommended'
 
 export const security = (): Config[] => [
 	pluginSecurity.configs.recommended,
 	// {
-	// 	name: 'weiland/security/recommended',
+	// 	name: 'audiolab/security/recommended',
 	// 	plugins: {
 	// 		security: pluginSecurity,
 	// 	},

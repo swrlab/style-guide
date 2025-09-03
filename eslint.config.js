@@ -2,8 +2,8 @@ import { audiolab } from './src/eslint/index.ts'
 
 export default audiolab(
 	{
-		prettier: false,
-		// comments: true,
+		prettier: true,
+		comments: true,
 		vue: true,
 		typescript: true,
 	},

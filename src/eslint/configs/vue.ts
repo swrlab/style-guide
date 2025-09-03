@@ -10,13 +10,13 @@ const vueTs: Config[] = typescriptCore
 		return {
 			...config,
 			files: [GLOB_VUE],
-			name: `weiland/vue/${config.name?.replace('weiland/', '') || 'anonymous'}`,
+			name: `audiolab/vue/${config.name?.replace('audiolab/', '') || 'anonymous'}`,
 		}
 	})
 
 const vueA11y: Config[] = [
 	{
-		name: 'weiland/vue/a11y',
+		name: 'audiolab/vue/a11y',
 		rules: {
 			'vue-a11y/alt-text': 'error',
 			'vue-a11y/anchor-has-content': 'error',
@@ -77,7 +77,7 @@ export const vue = (options: OptionsVue = {}): Config[] => [
 				watchEffect: 'readonly',
 			},
 		},
-		name: 'weiland/vue/setup',
+		name: 'audiolab/vue/setup',
 		plugins: {
 			vue: pluginVue,
 			...(options.a11y ? { 'vue-a11y': pluginVueA11y } : {}),
@@ -98,7 +98,7 @@ export const vue = (options: OptionsVue = {}): Config[] => [
 				sourceType: 'module',
 			},
 		},
-		name: 'weiland/vue/rules',
+		name: 'audiolab/vue/rules',
 		plugins: {
 			'@typescript-eslint': tseslint.plugin as ESLint.Plugin,
 			vue: pluginVue,

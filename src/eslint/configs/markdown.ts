@@ -5,12 +5,12 @@ import { pluginMarkdown } from '../plugins.ts'
 export const markdown = (): Config[] => [
 	...pluginMarkdown.configs.processor.map((config: Config) => ({
 		...config,
-		name: `weiland/${config.name || 'anonymous'}`,
+		name: `audiolab/${config.name || 'anonymous'}`,
 	})),
 
 	{
 		files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
-		name: 'weiland/markdown-rules',
+		name: 'audiolab/markdown-rules',
 		rules: {
 			'@typescript-eslint/comma-dangle': 'off',
 			'@typescript-eslint/consistent-type-imports': 'off',

@@ -28,6 +28,12 @@ export const config = {
 	// plugins: ['prettier-plugin-packagejson'],
 	overrides: [
 		{
+			files: ['**/*.jsonc'],
+			options: {
+				trailingComma: 'none',
+			},
+		},
+		{
 			files: ['*.yml', '*.yaml', '*.md'],
 			options: {
 				useTabs: false,
