@@ -22,12 +22,8 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-
-      - name: Setup node and npm
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          registry-url: 'https://registry.npmjs.org/'
+          registries: |
+            https://registry.npmjs.org/
 
       - name: bun install
         run: bun install
@@ -38,7 +34,7 @@ jobs:
       - name: bun test
         run: bun run test
 
-      - name: npm publish
-        run: npm publish --access public --provenance --no-git-checks
+      - name: bun publish
+        run: bun publish --access public --provenance --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
