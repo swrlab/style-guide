@@ -33,7 +33,7 @@
 		"build:typegen": "bun scripts/typegen.ts",
 		"build:inspector": "bun run build && eslint-config-inspector build",
 		"format": "prettier --write .",
-		"lint": "bunx --bun eslint --max-warnings=0",
+		"lint": "eslint --max-warnings=0",
 		"lint:fix": "eslint --max-warnings=0 --fix",
 		"prettier-check": "prettier --check .",
 		"release": "bumpp",

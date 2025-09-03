@@ -22,8 +22,7 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-          registries: |
-            https://registry.npmjs.org/
+          registry-url: https://registry.npmjs.org/
 
       - name: bun install
         run: bun install
@@ -32,7 +31,7 @@ jobs:
         run: bun run build
 
       - name: bun test
-        run: bun run test
+        run: bun run --bun test
 
       - name: bun publish
         run: bun publish --access public --provenance --no-git-checks
