@@ -3,17 +3,15 @@ import { audiolab } from './eslint/presets.js'
 export default audiolab(
 	[
 		{
-			ignores: [],
-		},
-		{
 			rules: {
 				'import/extensions': ['error', 'ignorePackages'],
 			},
 		},
 	],
 	{
-		prettier: true,
+		prettier: false,
 		comments: true,
 		vue: true,
+		typescript: true,
 	}
 )
