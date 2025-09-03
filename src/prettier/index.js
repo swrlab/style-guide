@@ -14,6 +14,7 @@ const overridableDefaults = {
 	// printWidth: 120,
 	useTabs: true,
 	semi: false,
+	singleQuote: true,
 	trailingComma: 'es5',
 }
 
@@ -23,9 +24,6 @@ const overridableDefaults = {
  */
 export const config = {
 	...overridableDefaults,
-	singleQuote: true,
-	// Conflicts with sortPackagejson (from sort.js)
-	// plugins: ['prettier-plugin-packagejson'],
 	overrides: [
 		{
 			files: ['**/*.jsonc'],

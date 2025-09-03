@@ -9,6 +9,7 @@ export default audiolab(
 	},
 	[
 		{
+			name: 'user-overrides/rules',
 			rules: {
 				'import/extensions': ['error', 'ignorePackages'],
 			},
