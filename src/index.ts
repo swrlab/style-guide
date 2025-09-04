@@ -1,5 +1,2 @@
-const biome = {}
-const eslint = {}
-const prettier = {}
-
-export { biome, eslint, prettier }
+export * from './eslint/types.ts'
+export { default as prettier } from './prettier/index.js'

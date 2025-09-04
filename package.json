@@ -19,9 +19,19 @@
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"exports": {
+		".": {
+			"types": "./types/index.d.ts",
+			"default": "./dist/index.js"
+		},
 		"./biome.json": "./dist/biome.json",
-		"./eslint.js": "./dist/eslint.js",
-		"./prettier.js": "./dist/prettier.js",
+		"./eslint.js": {
+			"types": "./dist/eslint.d.ts",
+			"default": "./dist/eslint.js"
+		},
+		"./prettier.js": {
+			"types": "./types/prettier.d.ts",
+			"default": "./dist/prettier.js"
+		},
 		"./package.json": "./package.json"
 	},
 	"publishConfig": {
