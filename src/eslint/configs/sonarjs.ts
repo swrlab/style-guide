@@ -14,6 +14,7 @@ export const sonarjs = (): Config[] => [
 
 			'sonarjs/no-unused-vars': 'off',
 			'sonarjs/todo-tag': 'off',
+			'sonarjs/slow-regex': 'off',
 		},
 	},
 ]
