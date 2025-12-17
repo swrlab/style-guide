@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/style-guide",
-	"version": "2.0.8",
+	"version": "2.0.9-beta.1",
 	"packageManager": "bun@1.2.22",
 	"description": "SWR Audio Lab's engineering style guide.",
 	"type": "module",
