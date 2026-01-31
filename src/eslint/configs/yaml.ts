@@ -17,8 +17,8 @@ export const yaml = (): Config[] => [
 		},
 		name: 'audiolab/yaml/rules',
 		rules: {
-			...(pluginYaml.configs.standard.rules as RuleOptions),
-			...(pluginYaml.configs.prettier.rules as RuleOptions),
+			...(pluginYaml.configs.standard as RuleOptions),
+			...(pluginYaml.configs.prettier as RuleOptions),
 			'yml/no-empty-mapping-value': 'off',
 		},
 	},
