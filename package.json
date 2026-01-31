@@ -25,6 +25,8 @@
 			"default": "./dist/index.js"
 		},
 		"./biome.json": "./dist/biome.json",
+		"./.oxlintrc.json": "./dist/.oxlintrc.json",
+		"./.oxfmtrc.json": "./dist/.oxfmtrc.json",
 		"./eslint": {
 			"types": "./dist/eslint.d.ts",
 			"default": "./dist/eslint.js"

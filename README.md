@@ -111,6 +111,24 @@ To use the shared Biome config, set the following in `biome.json`:
 }
 ```
 
+## OXC (Oxlint / Oxfmt)
+
+To use the shared Oxc config, for the formatter:
+
+```json
+{
+  "extends": ["@swrlab/style-guide/.oxfmtrc.json"]
+}
+```
+
+And for the linting:
+
+```json
+{
+  "extends": ["@swrlab/style-guide/.oxlintrc.json"]
+}
+```
+
 ## Credits
 
 This config used to be inspired by the work of [The Vercel Style Guide](https://github.com/vercel/style-guide) and is further
