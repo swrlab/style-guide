@@ -6,5 +6,5 @@ export default defineConfig({
 		eslint: 'src/eslint/index.ts',
 		prettier: 'src/prettier/index.js',
 	},
-	copy: ['src/biome/biome.json', { from: 'src/biome/biome.json', to: 'dist/biome.json' }],
+	copy: ['src/biome/biome.json', { from: 'src/biome/biome.json', to: 'dist' }],
 })
