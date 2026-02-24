@@ -16,20 +16,20 @@
 	"files": [
 		"dist"
 	],
-	"main": "dist/index.js",
-	"module": "./dist/index.js",
+	"main": "dist/index.mjs",
+	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.mts",
-			"default": "./dist/index.js"
+			"default": "./dist/index.mjs"
 		},
 		"./biome.json": "./dist/biome.json",
 		"./.oxlintrc.json": "./dist/.oxlintrc.json",
 		"./.oxfmtrc.json": "./dist/.oxfmtrc.json",
 		"./eslint": {
 			"types": "./dist/eslint.d.mts",
-			"default": "./dist/eslint.js"
+			"default": "./dist/eslint.mjs"
 		},
 		"./eslint.js": {
 			"types": "./dist/eslint.d.mts",
@@ -41,7 +41,7 @@
 		},
 		"./prettier": {
 			"types": "./dist/prettier.d.mts",
-			"default": "./dist/prettier.js"
+			"default": "./dist/prettier.mjs"
 		},
 		"./prettier.mjs": {
 			"types": "./dist/prettier.d.mts",
