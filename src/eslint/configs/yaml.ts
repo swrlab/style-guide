@@ -1,24 +1,18 @@
-import type { RuleOptions } from '../types.generated.js'
 import type { Config } from '../types.ts'
 import { GLOB_YAML } from '../constants.ts'
-import { parserYaml, pluginYaml } from '../plugins.ts'
+import { pluginYaml } from '../plugins.ts'
+
+const yamlConfigs = Array.from(new Set([...pluginYaml.configs.standard, ...pluginYaml.configs.prettier]))
 
 export const yaml = (): Config[] => [
-	{
-		name: 'audiolab/yaml/setup',
-		plugins: {
-			yml: pluginYaml,
-		},
-	},
+	...yamlConfigs.map((config) => ({
+		...config,
+		name: 'audiolab/yaml/standard',
+	})),
 	{
 		files: [GLOB_YAML],
-		languageOptions: {
-			parser: parserYaml,
-		},
 		name: 'audiolab/yaml/rules',
 		rules: {
-			...(pluginYaml.configs.standard as RuleOptions),
-			...(pluginYaml.configs.prettier as RuleOptions),
 			'yml/no-empty-mapping-value': 'off',
 		},
 	},

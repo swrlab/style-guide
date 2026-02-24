@@ -6,6 +6,7 @@ export default audiolab(
 		comments: true,
 		vue: true,
 		typescript: true,
+		yaml: true,
 	},
 	[
 		{

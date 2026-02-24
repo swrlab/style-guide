@@ -27,7 +27,7 @@ jobs:
       - name: Setup node for npm OIDC
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.0.1
         with:
-          node-version: '24.x'
+          node-version: 24.x
 
       - name: bun install
         run: bun install --frozen-lockfile
