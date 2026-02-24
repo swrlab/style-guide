@@ -18,30 +18,38 @@
 	],
 	"main": "dist/index.js",
 	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"types": "./dist/index.d.mts",
 	"exports": {
 		".": {
-			"types": "./types/index.d.ts",
+			"types": "./dist/index.d.mts",
 			"default": "./dist/index.js"
 		},
 		"./biome.json": "./dist/biome.json",
 		"./.oxlintrc.json": "./dist/.oxlintrc.json",
 		"./.oxfmtrc.json": "./dist/.oxfmtrc.json",
 		"./eslint": {
-			"types": "./dist/eslint.d.ts",
+			"types": "./dist/eslint.d.mts",
 			"default": "./dist/eslint.js"
 		},
 		"./eslint.js": {
-			"types": "./dist/eslint.d.ts",
-			"default": "./dist/eslint.js"
+			"types": "./dist/eslint.d.mts",
+			"default": "./dist/eslint.mjs"
+		},
+		"./eslint.mjs": {
+			"types": "./dist/eslint.d.mts",
+			"default": "./dist/eslint.mjs"
 		},
 		"./prettier": {
-			"types": "./types/prettier.d.ts",
+			"types": "./dist/prettier.d.mts",
 			"default": "./dist/prettier.js"
 		},
+		"./prettier.mjs": {
+			"types": "./dist/prettier.d.mts",
+			"default": "./dist/prettier.mjs"
+		},
 		"./prettier.js": {
-			"types": "./types/prettier.d.ts",
-			"default": "./dist/prettier.js"
+			"types": "./dist/prettier.d.mts",
+			"default": "./dist/prettier.mjs"
 		},
 		"./package.json": "./package.json"
 	},

@@ -45,7 +45,7 @@ To use the shared Prettier config, create a `prettier.config.js`
 or `prettier.config.mjs` if in a non-ESM project with following contents:
 
 ```js
-import audiolabPrettierConfig from '@swrlab/style-guide/prettier.js'
+import audiolabPrettierConfig from '@swrlab/style-guide/prettier.mjs'
 
 /**
  * @see https://prettier.io/docs/configuration
@@ -62,7 +62,7 @@ Another way is to set the following in `package.json`.
 
 ```json
 {
-  "prettier": "@swrlab/style-guide/prettier.js"
+  "prettier": "@swrlab/style-guide/prettier.mjs"
 }
 ```
 
@@ -77,7 +77,7 @@ Usage:
 
 ```js
 // eslint.config.mjs
-import { audiolab } from '@swrlab/style-guide/eslint.js'
+import { audiolab } from '@swrlab/style-guide/eslint.mjs'
 
 export default audiolab(
   {
