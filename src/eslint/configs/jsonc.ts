@@ -1,20 +1,16 @@
-import type { Linter } from 'eslint'
 import type { Config } from '../types.ts'
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSON_WITH_COMMENTS, GLOB_JSONC } from '../constants.ts'
 import { parserJsonc, pluginJsonc } from '../plugins.ts'
 
 export const jsonc = (): Config[] => [
-	{
-		name: 'audiolab/jsonc/setup',
-		plugins: {
-			jsonc: pluginJsonc,
-		},
-	},
+	...pluginJsonc.configs['recommended-with-json'].map((config) => ({
+		...config,
+		name: `audiolab/jsonc/${config.name || 'recommended'}`,
+	})),
 	{
 		files: [GLOB_JSON],
 		name: 'audiolab/json/rules',
 		rules: {
-			...(pluginJsonc.configs['recommended-with-json'].rules as Linter.RulesRecord),
 			'jsonc/no-comments': 'warn',
 		},
 	},
@@ -25,7 +21,6 @@ export const jsonc = (): Config[] => [
 		},
 		name: 'audiolab/jsonc/rules',
 		rules: {
-			...(pluginJsonc.configs['recommended-with-jsonc'].rules as Linter.RulesRecord),
 			'jsonc/quote-props': 'off',
 			'jsonc/quotes': 'off',
 		},

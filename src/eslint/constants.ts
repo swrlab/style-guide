@@ -29,6 +29,7 @@ export const GLOB_JSON_WITH_COMMENTS: string[] = [
 	GLOB_PACKAGE_JSON,
 	'**/tsconfig.json',
 	'**/.zed/settings.json',
+	'**/.zed/settings.jsonc',
 	'**/deno.json',
 ]
 

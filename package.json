@@ -61,6 +61,7 @@
 		"build": "bun run build:typegen && tsdown",
 		"build:typegen": "bun scripts/typegen.ts",
 		"build:inspector": "bun run build && eslint-config-inspector build",
+		"checks": "bun run --parallel prettier-check typecheck lint",
 		"format": "prettier --write .",
 		"lint": "eslint --max-warnings=0",
 		"lint:fix": "eslint --max-warnings=0 --fix",
@@ -120,7 +121,6 @@
 		"eslint-typegen": "^2.3.1",
 		"lint-staged": "^16.2.7",
 		"tsdown": "^0.21.0-beta.2",
-		"tsx": "^4.21.0",
 		"typescript": "^5.9.3"
 	},
 	"engines": {
