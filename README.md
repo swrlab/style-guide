@@ -9,8 +9,8 @@
 
 ## Introduction
 
-This repository is the home of an based on Vercel's style guide, which includes configs for
-popular linting and styling tools.
+This repository is the home of an based on Vercel's style guide, which includes
+configs for popular linting and styling tools.
 
 The following configs are available, and are designed to be used together.
 
@@ -45,7 +45,7 @@ To use the shared Prettier config, create a `prettier.config.js`
 or `prettier.config.mjs` if in a non-ESM project with following contents:
 
 ```js
-import audiolabPrettierConfig from '@swrlab/style-guide/prettier.mjs'
+import audiolabPrettierConfig from '@swrlab/style-guide/prettier'
 
 /**
  * @see https://prettier.io/docs/configuration
@@ -62,7 +62,7 @@ Another way is to set the following in `package.json`.
 
 ```json
 {
-  "prettier": "@swrlab/style-guide/prettier.mjs"
+  "prettier": "@swrlab/style-guide/prettier"
 }
 ```
 
@@ -77,7 +77,7 @@ Usage:
 
 ```js
 // eslint.config.mjs
-import { audiolab } from '@swrlab/style-guide/eslint.mjs'
+import { audiolab } from '@swrlab/style-guide/eslint'
 
 export default audiolab(
   {
@@ -107,7 +107,7 @@ To use the shared Biome config, set the following in `biome.json`:
 
 ```json
 {
-  "extends": ["@swrlab/style-guide/biome.json"]
+  "extends": ["@swrlab/style-guide/biome"]
 }
 ```
 
@@ -131,8 +131,8 @@ And for the linting:
 
 ## Credits
 
-This config used to be inspired by the work of [The Vercel Style Guide](https://github.com/vercel/style-guide) and is further
-based on a mix of:
+This config used to be inspired by the work of [The Vercel Style Guide](https://github.com/vercel/style-guide)
+and is further based on a mix of:
 
 - https://github.com/antfu/eslint-config
 - https://github.com/sxzz/eslint-config
@@ -140,16 +140,6 @@ based on a mix of:
 ## Contributing
 
 After cloning, you can run `bun install` (or `npm install`) to install the npm dependencies.
-
-## Development
-
-Start a local eslint-config-inspector:
-
-$ bun run dev
-
-Build types and the config into `dist/`:
-
-$ bun run build
 
 ## License
 

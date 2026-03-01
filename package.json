@@ -24,7 +24,7 @@
 			"types": "./dist/index.d.mts",
 			"default": "./dist/index.mjs"
 		},
-		"./biome.json": "./dist/biome.json",
+		"./biome": "./dist/biome.json",
 		"./.oxlintrc.json": "./dist/.oxlintrc.json",
 		"./.oxfmtrc.json": "./dist/.oxfmtrc.json",
 		"./eslint": {
@@ -63,6 +63,7 @@
 		"build:inspector": "bun run build && eslint-config-inspector build",
 		"checks": "bun run --parallel prettier-check typecheck lint",
 		"format": "prettier --write .",
+		"format:check:beta": "prettier --experimental-cli --check .",
 		"lint": "eslint --max-warnings=0",
 		"lint:fix": "eslint --max-warnings=0 --fix",
 		"prettier-check": "prettier --check .",

@@ -6,6 +6,8 @@ import audiolabPretterConfig from './src/prettier/index.ts'
  */
 const config = {
 	...audiolabPretterConfig,
+	// prettier experimental cli does not take .editorconfig into account
+	printWidth: 120,
 	// // plugins: ['@prettier/plugin-oxc'],
 	// overrides: [
 	// 	{
