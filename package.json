@@ -121,6 +121,7 @@
 		"eslint": "^10.0.2",
 		"eslint-typegen": "^2.3.1",
 		"lint-staged": "^16.2.7",
+		"oxlint": "^1.51.0",
 		"tsdown": "^0.21.0-beta.2",
 		"typescript": "^5.9.3"
 	},

@@ -1,32 +1,23 @@
 {
 	"languages": {
-		"JSONC": {
+		"JSON": {
+			"language_servers": ["prettier", "eslint", "..."],
 			"formatter": {
 				"language_server": {
-					"name": "eslint"
+					"name": "prettier"
 				}
 			},
 			"code_actions_on_format": {
 				"source.fixAll.eslint": true
-			},
-			"prettier": {
-				"allowed": true
 			},
 			"format_on_save": "on"
 		},
-		"JSON": {
-			"formatter": {
-				"language_server": {
-					"name": "eslint"
-				}
-			},
+		"JSONC": {
+			"language_servers": ["prettier", "eslint", "..."],
 			"code_actions_on_format": {
 				"source.fixAll.eslint": true
 			},
-			"prettier": {
-				"allowed": true
-			},
-			"format_on_save": "true"
+			"format_on_save": "on"
 		},
 		"JavaScript": {
 			"formatter": {
@@ -44,11 +35,11 @@
 		},
 		"TypeScript": {
 			"language_servers": ["eslint", "!deno", "!biome", "..."],
-			// "formatter": {
-			// 	"language_server": {
-			// 		"name": "eslint"
-			// 	}
-			// },
+			"formatter": {
+				"language_server": {
+					"name": "eslint"
+				}
+			},
 			"code_actions_on_format": {
 				"source.fixAll.eslint": true
 			},

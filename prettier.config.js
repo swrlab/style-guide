@@ -1,4 +1,4 @@
-import audiolabPretterConfig from './src/prettier/index.ts'
+import { config as audiolabPretterConfig } from './src/prettier/index.ts'
 
 /**
  * @see https://prettier.io/docs/configuration

@@ -263,10 +263,15 @@ export const sortImports = (): Config[] => [
 				{
 					groups: [
 						'type-import',
-						['type-parent', 'type-sibling', 'type-index', 'type-internal'],
+						'type-builtin',
+						'type-external',
+						'type-internal',
+						'type-subpath',
+						['type-parent', 'type-sibling', 'type-index'],
 						'value-builtin',
 						'value-external',
 						'value-internal',
+						'value-subpath',
 						['value-parent', 'value-sibling', 'value-index'],
 						'side-effect',
 						'side-effect-style',
@@ -275,6 +280,8 @@ export const sortImports = (): Config[] => [
 					newlinesBetween: 'ignore',
 					order: 'asc',
 					type: 'natural',
+					// TODO: detect (or let user set)
+					// environment: 'bun',
 				},
 			],
 			'perfectionist/sort-named-exports': ['warn', { order: 'asc', type: 'natural' }],

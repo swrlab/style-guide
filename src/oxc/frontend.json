@@ -1,0 +1,13 @@
+{
+	"$schema": "../../node_modules/oxlint/configuration_schema.json",
+	"plugins": ["vue"],
+	"rules": {},
+	"settings": {},
+	"env": {
+		"browser": true,
+		"builtin": true,
+		"es6": true
+	},
+	"globals": {},
+	"ignorePatterns": []
+}

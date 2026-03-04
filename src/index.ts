@@ -1,2 +1,2 @@
 export * from './eslint/types.ts'
-export { default as prettier } from './prettier/index.js'
+export { config as prettier } from './prettier/index.ts'

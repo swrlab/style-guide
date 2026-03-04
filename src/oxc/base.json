@@ -1,0 +1,40 @@
+{
+	"$schema": "../../node_modules/oxlint/configuration_schema.json",
+	"plugins": ["eslint", "import", "node", "oxc", "promise", "typescript", "unicorn"],
+	"categories": {
+		"correctness": "error",
+		"suspicious": "error",
+		"pedantic": "error",
+		"perf": "error",
+		"style": "error",
+		"restriction": "error",
+		"nursery": "warn"
+	},
+	"rules": {},
+	"settings": {
+		"jsdoc": {
+			"ignorePrivate": false,
+			"ignoreInternal": false,
+			"ignoreReplacesDocs": true,
+			"overrideReplacesDocs": true,
+			"augmentsExtendsReplacesDocs": false,
+			"implementsReplacesDocs": false,
+			"exemptDestructuredRootsFromChecks": false,
+			"tagNamePreference": {}
+		},
+		"vitest": {
+			"typecheck": false
+		}
+	},
+	"env": {
+		"builtin": true,
+		"shared-node-browser": true,
+		"es2024": true
+	},
+	"options": {
+		"typeAware": true,
+		"typeCheck": true
+	},
+	"globals": {},
+	"ignorePatterns": []
+}
