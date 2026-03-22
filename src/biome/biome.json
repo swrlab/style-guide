@@ -34,6 +34,7 @@
 				"noUndeclaredDependencies": "info"
 			},
 			"nursery": {
+				"useBaseline": "error",
 				"useSortedClasses": "info"
 			},
 			"style": {
