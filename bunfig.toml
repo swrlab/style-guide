@@ -1,5 +1,8 @@
 telemetry = false
 
 [install]
-# Only install package versions published at least 2 days ago
-minimumReleaseAge = 172_800 # in seconds
+# Only install package versions published at least 2 days ago (in seconds)
+minimumReleaseAge = 172_800
+
+# Don't install dependencies listed as "optional" by default
+optional = false

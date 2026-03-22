@@ -7,4 +7,6 @@ export default defineConfig({
 		prettier: 'src/prettier/index.js',
 	},
 	copy: ['src/oxc/.oxfmtrc.json', 'src/oxc/.oxlintrc.json', 'src/biome/biome.json'],
+	attw: { profile: 'esm-only' },
+	publint: true,
 })

@@ -57,6 +57,7 @@
 		"provenance": true
 	},
 	"scripts": {
+		"attw": "attw --pack . --profile esm-only",
 		"dev": "eslint-config-inspector",
 		"build": "bun run build:typegen && tsdown",
 		"build:typegen": "bun scripts/typegen.ts",
@@ -114,6 +115,8 @@
 		"vue-eslint-parser": "^10.4.0"
 	},
 	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.18.2",
+		"@arethetypeswrong/core": "^0.18.2",
 		"@eslint/config-inspector": "^1.5.0",
 		"@types/node": "^25.5.0",
 		"bumpp": "^11.0.1",
@@ -122,6 +125,7 @@
 		"knip": "^6.0.0",
 		"lint-staged": "^16.4.0",
 		"oxlint": "^1.56.0",
+		"publint": "^0.3.18",
 		"tsdown": "^0.21.4",
 		"typescript": "^5.9.3"
 	},
@@ -131,5 +135,8 @@
 	},
 	"lint-staged": {
 		"*": "prettier --write --ignore-unknown"
+	},
+	"optionalDependencies": {
+		"oxfmt": "^0.41.0"
 	}
 }
