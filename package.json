@@ -57,7 +57,7 @@
 		"provenance": true
 	},
 	"scripts": {
-		"attw": "attw --pack . --profile esm-only",
+		"attw": "attw --pack . --profile esm-only --no-summary",
 		"dev": "eslint-config-inspector",
 		"build": "bun run build:typegen && tsdown",
 		"build:typegen": "bun scripts/typegen.ts",
