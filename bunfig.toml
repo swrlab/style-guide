@@ -5,4 +5,4 @@ telemetry = false
 minimumReleaseAge = 172_800
 
 # Don't install dependencies listed as "optional" by default
-optional = false
+# optional = false
