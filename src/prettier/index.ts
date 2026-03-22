@@ -39,4 +39,5 @@ export const config: Config = {
 	],
 }
 
+/** @deprecated Please use `import { config } from '@swrlab/style-guide/prettier` over this default export. */
 export default config
