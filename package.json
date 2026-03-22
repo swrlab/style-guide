@@ -85,6 +85,9 @@
 			"optional": true
 		}
 	},
+	"optionalDependencies": {
+		"oxfmt": "^0.41.0"
+	},
 	"dependencies": {
 		"@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
 		"@eslint/js": "^10.0.1",
@@ -135,8 +138,5 @@
 	},
 	"lint-staged": {
 		"*": "prettier --write --ignore-unknown"
-	},
-	"optionalDependencies": {
-		"oxfmt": "^0.41.0"
 	}
 }
