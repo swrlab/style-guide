@@ -58,6 +58,7 @@
 	},
 	"scripts": {
 		"attw": "attw --pack . --profile esm-only --no-summary",
+		"changeset": "changeset",
 		"changeset:version": "changeset version",
 		"changeset:release": "changeset publish",
 		"commit": "commit",
