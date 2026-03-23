@@ -2,8 +2,9 @@ name: Release NPM package
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [feat/add-changesets-for-publishing]
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
@@ -11,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
       id-token: write
       attestations: write
     env:
@@ -42,8 +44,17 @@ jobs:
       - name: bun test
         run: bun run --bun test
 
-      - name: npm publish
-        run: npm publish --access public --provenance
+      - name: Create Release Pull Request or Publish to npm with trusted publishing
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          version: npm changesets:version
+          publish: npm changesets:publish
+          title: 'chore: release packages'
+          commit: 'chore: release packages'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
 
       - name: create github release
         run: gh release create ${{ github.ref_name }} --generate-notes

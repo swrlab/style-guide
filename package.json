@@ -58,6 +58,8 @@
 	},
 	"scripts": {
 		"attw": "attw --pack . --profile esm-only --no-summary",
+		"changeset:version": "changeset version",
+		"changeset:release": "changeset publish",
 		"commit": "commit",
 		"dev": "eslint-config-inspector",
 		"build": "bun run build:typegen && tsdown",
@@ -70,7 +72,6 @@
 		"lint": "eslint --max-warnings=0",
 		"lint:fix": "eslint --max-warnings=0 --fix",
 		"prettier:check": "prettier --check .",
-		"release": "bumpp",
 		"test": "bun run prettier:check && bun run typecheck && bun run lint",
 		"typecheck": "tsc --noEmit"
 	},
@@ -121,6 +122,7 @@
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.18.2",
 		"@arethetypeswrong/core": "^0.18.2",
+		"@changesets/cli": "^2.30.0",
 		"@commitlint/cli": "^20.5.0",
 		"@commitlint/config-conventional": "^20.5.0",
 		"@commitlint/prompt-cli": "^20.5.0",
