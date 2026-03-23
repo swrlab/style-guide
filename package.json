@@ -60,7 +60,7 @@
 		"attw": "attw --pack . --profile esm-only --no-summary",
 		"changeset": "changeset",
 		"changeset:version": "changeset version",
-		"changeset:release": "changeset publish",
+		"changeset:publish": "changeset publish",
 		"commit": "commit",
 		"dev": "eslint-config-inspector",
 		"build": "bun run build:typegen && tsdown",
